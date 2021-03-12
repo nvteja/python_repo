@@ -6,3 +6,5 @@ for i in range(0, 100):
 x = [i for i in range(0, 100)]
 
 y = sum(x)
+
+y = y ** 2
