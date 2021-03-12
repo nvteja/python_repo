@@ -1,0 +1,14 @@
+repos:
+-   repo: https://github.com/ambv/black
+    rev: 19.10b0  # make sure this is the same version pinned in Pipfile
+    hooks:
+    - id: black
+      language_version: python3.9
+      stages: ['commit']
+-   repo: local
+    hooks:
+      - id: prepare-commit-msg
+        name: prepare-commit-msg
+        language: script
+        entry: ./etc/hooks/prepare-commit-msg
+        stages: ['prepare-commit-msg']
